@@ -35,12 +35,19 @@ export function CommandMenu() {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, []);
 
-  React.useEffect(() => {
-    if (!query.trim()) {
+  // Results and loading are reset when the query changes, not inside the effect.
+  function changeQuery(value: string) {
+    setQuery(value);
+    if (value.trim()) {
+      setLoading(true);
+    } else {
       setResults([]);
-      return;
+      setLoading(false);
     }
-    setLoading(true);
+  }
+
+  React.useEffect(() => {
+    if (!query.trim()) return;
     const timeout = setTimeout(() => {
       searchWorkspace(query)
         .then(setResults)
@@ -53,7 +60,7 @@ export function CommandMenu() {
 
   function select(href: string) {
     setOpen(false);
-    setQuery("");
+    changeQuery("");
     router.push(href);
   }
 
@@ -75,7 +82,7 @@ export function CommandMenu() {
         open={open}
         onOpenChange={(next) => {
           setOpen(next);
-          if (!next) setQuery("");
+          if (!next) changeQuery("");
         }}
         title="Pesquisa global"
         description="Pesquisar clientes, trabalhos, orçamentos, faturas e serviços"
@@ -83,7 +90,7 @@ export function CommandMenu() {
         <Command shouldFilter={false}>
           <CommandInput
             value={query}
-            onValueChange={setQuery}
+            onValueChange={changeQuery}
             placeholder="Pesquisar clientes, trabalhos, orçamentos, faturas..."
           />
           <CommandList>

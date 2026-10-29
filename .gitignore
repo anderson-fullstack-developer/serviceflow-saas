@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -43,3 +44,8 @@ next-env.d.ts
 # pasta antiga (o projeto foi achatado para a raiz); o editor por vezes
 # recria um ficheiro fantasma aqui — nunca deve ser rastreado pelo git
 /app/
+
+# AI assistant instructions (kept locally, not published)
+AGENTS.md
+CLAUDE.md
+.claude/

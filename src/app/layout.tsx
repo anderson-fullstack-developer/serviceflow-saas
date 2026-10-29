@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NetoWork",
+  title: "ServiceFlow",
   description: "Gerir qualquer serviço, num só lugar.",
 };
 
