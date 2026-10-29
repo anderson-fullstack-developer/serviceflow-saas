@@ -13,6 +13,19 @@ Client → Quote → accepted online → Job → Invoice → Payment
 
 **Live demo:** [appglobal-sepia.vercel.app](https://appglobal-sepia.vercel.app) (sign up with Google or email)
 
+## Status
+
+**In active development.** The core workflow (clients, quotes, jobs, invoices and payment tracking) works end to end.
+
+| Phase | Scope | State |
+|---|---|---|
+| 1. Foundation | Next.js, Drizzle, PostgreSQL, Clerk, design system | ✅ Done |
+| 2. MVP | Workspaces, dashboard, clients, services, jobs, tasks, quotes, calendar | ✅ Done |
+| 3. Billing | Invoices with PDF, payments, photos and documents | ✅ Done |
+| | Client portal, transactional emails | 🚧 Next |
+| 4. Collaboration | Teams and roles, automations, notifications, reports | ✅ Done |
+| 5. Expansion | Online payments (Stripe Connect), integrations, mobile | 📋 Planned |
+
 ## Features
 
 - **Clients** with addresses and attached documents
