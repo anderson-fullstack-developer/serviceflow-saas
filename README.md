@@ -1,6 +1,6 @@
 # ServiceFlow
 
-[![CI](https://github.com/anderson-fullstack-developer/serviceflow/actions/workflows/ci.yml/badge.svg)](https://github.com/anderson-fullstack-developer/serviceflow/actions/workflows/ci.yml)
+[![CI](https://github.com/anderson-fullstack-developer/ServiceFlow/actions/workflows/ci.yml/badge.svg)](https://github.com/anderson-fullstack-developer/ServiceFlow/actions/workflows/ci.yml)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
